@@ -1,0 +1,257 @@
+html{
+    scroll-behavior: smooth;
+}
+ body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 97vh;
+    font-family: "Exo 2", sans-serif;
+    background-image: url(icons_static/background.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.contenar{
+    display: flex;
+    justify-content: space-between;
+    width: 87%;
+    height: 87vh;
+    margin-bottom: 1rem;
+    border-radius: 0.4rem;
+    box-shadow: rgba(46, 44, 44, 0.555) 0px 5px 20px, rgba(43, 40, 40, 0.493) 0px 6px 6px;
+    overflow: hidden;
+}
+.left{
+    width: 35%;
+    height: 100%;
+    text-align: center;
+    border-right: 0.2rem solid rgba(62, 54, 65, 0.479);
+    backdrop-filter: blur(5rem);
+}
+#target{
+    height: 100%;
+    width: 100%;
+   opacity: 0.94;
+}
+.ol-control {
+    background-color: rgba(13, 114, 117, 0.616) !important;
+}
+#loction_mark img{
+    width: 1.6rem;
+}
+.p_div_wron{
+    width: 70%;
+    border-radius: 1rem;
+    overflow: hidden;
+    margin: 1rem auto;
+    opacity: 0.8;
+    display: none;
+}
+.wrong_img{
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+}
+.right{
+    width: 65%;
+    padding: 1rem ;
+    backdrop-filter: blur(5rem);
+    cursor: default;
+    -webkit-user-select: none; 
+    -moz-user-select: none;   
+    -ms-user-select: none;    
+    user-select: none;       
+    display: none;
+}
+.right_head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 9vh;
+    color: wheat;
+    padding: 0 1rem;
+    text-shadow: 0 0 3px #d31b1b, 0 0 5px #db7018;
+}
+.p_date_day{
+    width: 10rem;
+}
+.right_time{
+    font-size: 1.9rem;
+    font-weight: bold;
+    text-align: center;
+}
+.p_location{
+    display: flex;
+    align-items: center;
+    width: 10rem;
+}
+#input_head{
+    padding: 0.4rem;
+    width: 8rem;
+    text-align: center;
+    border: none;
+    outline: none;
+    border-radius: 0.3rem;
+    background-color: rgba(250, 235, 215, 0.685);
+}
+.icon_earth{
+   margin-left: 0.5rem;
+   margin-bottom: 0.2rem;
+   width: 1.5rem;
+   animation: anmat_rotate_earth 5s linear infinite;
+}
+/* ------------------ --------------------------------*/
+.right_info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 18vh ;
+    margin-top: 1rem;
+    padding-left: 2rem;
+    background-color: rgba(102, 51, 153, 0.219);
+    color: gold;
+}
+.icon_weather{
+    width: 10rem;
+}
+.p_tempracher{
+    text-align: center;
+    position: relative;
+    right: -2rem;
+}
+.p_temp{
+    display: inline-block;
+    margin: 0 0.5rem;
+    text-align: center;
+}
+.temp{
+    padding: 0.8rem;
+    font-size: 1.9rem;
+}
+.p_right_info_eye{
+    text-align: center;
+}
+.info_eye_icon{
+    width: 4.5rem;
+}
+.p_humidity{
+    text-align: center;
+    position: relative;
+    right: -1.7rem;
+}
+.img_humidity{
+    width: 4.3rem;
+}
+/* /////////////iteam time  */
+.list_weather_day ,.list_weather_time{
+    display: flex;
+    overflow: hidden;
+    max-width: 100%;
+    overflow-x: hidden; 
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch; 
+    transition: linear 0.5s;
+}
+.list_weather_time{
+    margin-top: 1rem;
+}
+.list_weather_day{
+    padding-top: 0.8rem;
+}
+.p_iteam_day,.p_iteam_time{
+    padding: 0.3rem;
+    flex-shrink: 0;
+    width: 6.5rem;
+    height: 8rem;
+    margin: 0 0.4rem;
+    text-align: center;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    border: 0.12rem solid rgba(245, 222, 179, 0.589);
+    background: linear-gradient(0deg, rgba(166, 33, 75, 0.61) 35%, rgba(0, 255, 157, 0.664) 98%);
+}
+.setBackgroundClikced{
+    background: linear-gradient(0deg, rgba(41,102,180,1) 23%, rgb(238, 255, 0) 98%);
+}
+.iteam_img_time ,.iteam_img_day{
+    width: 4.5rem;
+}
+.id_day,.id_time{
+    display: none;
+}
+@media (min-width:1000px) {
+    .p_iteam_day:hover ,.p_iteam_time:hover{
+        background-color: rgba(207, 134, 23, 0.459);
+    }
+}
+@media screen and (max-width: 1000px) {
+    body{
+        height: fit-content;
+    }
+    .contenar{
+        flex-direction:column-reverse;
+        justify-content: space-between;
+        width: 100%;
+        height: 100%;
+    }
+    .right{
+        width: 100%;
+        box-shadow: 1px 2px 5px black;
+        padding: 0;
+    }
+    .left{
+        width: 100%;
+        border: 0;
+        height: 30rem;
+        padding:4rem  0.6rem 0.6rem;
+        margin-bottom: 2rem;
+    }
+    #target{
+        height: 100%;
+        width: 100%;
+    }
+    .right_head{
+        padding-top: 1rem;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    .p_location{
+        flex-direction: row-reverse;
+    }
+    .body{
+        background-image: none;
+    }
+    .right_head{
+        height:12vh ;
+    }
+    .right_info{
+        height: 22vh;
+    }
+    .icon_earth{
+        display: none;
+    }
+    .date{
+        padding-bottom: 0.3rem;
+        font-size: 1.1rem;
+    }
+    .info_eye_icon{
+        width: 3.5rem;
+    }
+    .img_humidity{
+        width: 3.6rem;
+    }
+  }
+  @keyframes anmat_rotate_earth {
+    0%{ 
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+  }

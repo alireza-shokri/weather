@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Alireza Shokri is a programmer and web developer. This project">
+    <link rel="shortcut icon" href="icons_static/favicon.webp" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="ol_map/ol.css">
+    <script src="ol_map/ol.js"></script>
+    <title>weather</title>
+</head>
+<body>
+    <div class="contenar">
+        <div class="left">
+            <div id="loction_mark"><img src="icons_static/map_mark.svg" alt="mark map"></div>
+            <div id="target"></div>
+        </div>
+        <div class="right">
+            <div class="right_head">
+                <div class="p_date_day">
+                    <p class="date"></p>
+                    <h3 class="right_today"></h3>
+                </div>
+                <p class="right_time"></p>
+                <div class="p_location">
+                    <input type="text"  id="input_head">
+                    <img src="icons_static/earth.svg" alt="icon" class="icon_earth">
+                </div>
+            </div>
+            <div class="right_info">
+                <div class="p_right_info_eye">
+                    <img src="icons_dynamic/eye.gif" alt="icon eye" class="info_eye_icon">
+                    <p class="visibility"></p>
+                </div>
+                <div class="p_humidity">
+                    <img src="icons_static/humidity-icon.png" alt="" class="img_humidity">
+                    <p class="humidity"></p>
+                </div>
+                <div class="p_tempracher">
+                    <p class="temp"></p>
+                    <div class="p_temp">
+                        <img src="icons_static/up.svg" alt="max-temp" class="img_temp_up">
+                        <span class="temp_up"></span>
+                    </div>
+                    <div class="p_temp">
+                        <img src="icons_static/down.svg" alt="min-temp" class="img_temp_down">
+                        <span class="temp_down" ></span>
+                    </div>
+                </div>
+                <img src="" alt="icon weather" class="icon_weather">
+            </div>
+           <div class="list_weather_time list">
+            <!-- <div class="p_iteam_time">
+                <p class="iteam_time">21:15</p>
+                <img src="icons_static/cloudy-night.svg" alt="" class="iteam_img_time">
+                <p class="iteam_temperature_time">6 &#176;C</p>
+            </div> -->
+           </div>
+           <div class="list_weather_day list">
+            <!-- <div class="p_iteam_day">
+                <p class="iteam_day">10-22</p>
+                <img src="icons_static/day.svg" alt="icon" class="iteam_img_day">
+                <p class="iteam_temperature_day">6 &#176;C</p>
+            </div> -->
+           </div>
+           <!-- wrong div  -->
+           <div class="p_div_wron">
+            <img src="icons_static/wrong.jpg" alt="wrong img" class="wrong_img">
+        </div>
+        </div> 
+    </div>
+    <script src="app.js"></script>
+    <noscript>google chrome not saport script</noscript>
+</body>
+</html>
